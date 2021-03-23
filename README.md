@@ -25,13 +25,23 @@ Update 11MAR2021: Target will be a "death" variable
 of whether the contestant made it to the TOP 3
 of the season. 
 
-Further update. I'm unsure if this is a right 
-censored data problem. I have the results from
-each season, for each contestant all the way through
-to the end, so there is no right censoring. HOWEVER,
-the original question can still stand:
-1. Predict if a customer will last to the Top 3.
-2. Predict how long a 
+Update 22MAR2021: using the 11MAR update logic, I can
+then also extend the somewhat weak variables (recall:
+I only have height and age) by creating dummies for
+models considered "tall" and "young". Formal definitions
+will follow. these can then be be used to explore 
+the bias against shorter models or the like... 
+
+So, the purpose of this project is evolving in 
+interesting ways:
+1. Perform Cox proportional hazard model to learn
+survival regression techniques.
+2. Use the data cleaning process for the manually retrieved
+data as an opportunity to pracrtice data pipeline unit
+testing. 
+3. Exploration of bias in modelling by using a dataset and
+industry with known bias toward taller women as models to
+explore AI explainability and outcomes analysis.
 
 # Notes and Starting Thoughts
 Note: sex is limited to only female contestants
