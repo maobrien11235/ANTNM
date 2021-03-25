@@ -1,5 +1,6 @@
 # statsmodels examples of the survival regression techniques.
 import statsmodels.api as sm
+import statsmodels.formula.api as smf
 
 # Needed to get around SSL: CERTIFICATE_VERIFY_FAILED
 # https://alm.rgbk.com/spaces/display/DSP/SSL+error+in+downloading+NLTK+models
@@ -50,3 +51,33 @@ stat, pv = sm.duration.survdiff(data.futime, data.death, data.sex)
 print(stat)
 print(pv)
 
+## Regression Methods
+del data['chapter']
+data = data.dropna()
+data['lam'] = data['lambda']
+data['female'] = (data['sex'] == "F").astype(int)
+data['year'] = data['sample.yr'] - min(data['sample.yr'])
+status = data['death'].values
+
+# Build Cox Proportional Hazard Regression Model (Cox Model)
+mod = smf.phreg("futime ~ 0 + age + female + creatinine + "
+                "np.sqrt(kappa) + np.sqrt(lam) + year + mgus",
+                data, status=status, ties="efron")
+
+result = mod.fit()
+print(result.summary())
+# Note log HR is the parameter estimate but the HR (Hazard Rate)
+# is the most directly applicable. Age's HR of 1.1065 indicates
+# a 1 unit (ie 1 year) increase in age increases the hazard by
+# 10.65%.
+
+# References for Surival Models
+# T Therneau (1996). Extending the Cox model. Technical report.
+# http://www.mayo.edu/research/documents/biostat-58pdf/DOC-10027288
+
+# G Rodriguez (2005). Non-parametric estimation in survival models.
+# http://data.princeton.edu/pop509/NonParametricSurvival.pdf
+
+# B Gillespie (2006). Checking the assumptions in the Cox proportional
+# hazards model.
+# http://www.mwsug.org/proceedings/2006/stats/MWSUG-2006-SD08.pdf
