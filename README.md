@@ -47,6 +47,14 @@ testing.
 industry with known bias toward taller women as models to
 explore AI explainability and outcomes analysis.
 
+Update 28MAR2021: as per usual I added another goal 
+as part of this project:
+4. Project Configuration with YAML files. Going to try 
+exploring the pyyaml or confuse libraries for leveraging
+YAMLs to coordinate the project. I hate it but I may also
+go down the route of virtual environments too... gonna
+try to resist that...
+
 # Notes and Starting Thoughts
 Note: sex is limited to only female contestants
 in the dataset. Season 22 had male contestants 
