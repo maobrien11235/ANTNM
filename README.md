@@ -37,8 +37,12 @@ interesting ways:
 1. Perform Cox proportional hazard model to learn
 survival regression techniques.
 2. Use the data cleaning process for the manually retrieved
-data as an opportunity to pracrtice data pipeline unit
-testing. 
+data as an opportunity to practice data pipeline unit
+testing.
+    * Also a good opportunity to explore Test Driven 
+    Development. Starting with writing the tests
+    in test_DatEng.py and then writing the functions
+    to perform the data engineering.
 3. Exploration of bias in modelling by using a dataset and
 industry with known bias toward taller women as models to
 explore AI explainability and outcomes analysis.

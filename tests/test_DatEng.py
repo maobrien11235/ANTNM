@@ -23,4 +23,4 @@ def test_clean_age():
     assert clean_age("23[4]") == 23
     
 def test_top_two():
-    assert 
+    assert if 
