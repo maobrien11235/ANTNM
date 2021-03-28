@@ -13,10 +13,12 @@ analysis.
 import pandas as pd
 
 # Project Imports
-from src.dat_eng import (
+from dat_eng import (
     import_data
     )
 
 
-import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis",
+test = import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/",
             "Manual_data.csv")
+test.info()
+
