@@ -1,3 +1,12 @@
-tables: Manual_data.csv
-    columns
+Path: /Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/
+
+data: Manual_data.csv
+    - columns
+        - Season
+        - Contestant
+        - Age
+        - Height
+        - Hometown
+        - Finish
+        - Place
 
