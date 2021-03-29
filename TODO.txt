@@ -1,0 +1,9 @@
+* Explore module import issue
+* Clean Data
+* Write data engineering unit tests
+* Ensure CLI pytesting works
+* Create Cox Model
+* Check Cox Model assumptions
+    * Unsure if I need to get more clever with how I define "death" in the model. Initiatl idea is to say that the target/"death" variable will be making it to the Top 2 in a given season, but this seems a bit opposite of the traditional censored data issue... usually entities in a censored regression problem could survive past the end of the sample period, but in the case of contests, it is expected that entities would "die off"... gonna need to write up on this.
+* Think on how to analyze taller model bias over the seasons. First thought is a simple F-test on the mean of Top 2 model height for seasons 1-5 compared to seasons 18-22.
+
