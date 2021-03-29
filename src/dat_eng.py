@@ -11,5 +11,19 @@ import pandas as pd
 from pandas import DataFrame
 
 def import_data(path: str, file: str) -> DataFrame:
+    """
+    Parameters
+    ----------
+    path : str
+        File path to project location of source data.
+    file : str
+        Name of csv file to be imported.
+
+    Returns
+    -------
+    DataFrame
+        Pandas DataFrame containing the project data.
+
+    """
     return pd.read_csv(path + file)
 

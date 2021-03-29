@@ -8,12 +8,11 @@ Created on Sat Mar 27 21:36:20 2021
 @purpose: File for main modeling and execution of the surivival
 analysis.
 """
-
-# Library Imports
-import pandas as pd
+import ANTNM_Survival_Analysis as antnm
+dir(antnm.src.dat_eng.import_data)
 
 # Project Imports
-from dat_eng import (
+from antnm.src.dat_eng import (
     import_data
     )
 
