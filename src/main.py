@@ -12,10 +12,15 @@ analysis.
 from ANTNM_Survival_Analysis.src.dat_eng import (
     import_data
     )
-
+import confuse
 
 test = import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/",
             "Manual_data.csv")
 test.info()
 
+import re
 
+test['Height']
+
+
+test['Height'].str.split(r'm')
