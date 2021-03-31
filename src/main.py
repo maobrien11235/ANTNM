@@ -23,4 +23,4 @@ import re
 test['Height']
 
 
-test['Height'].str.split(r'm')
+test['Height']
