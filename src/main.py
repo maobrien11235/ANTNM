@@ -23,4 +23,6 @@ import re
 test['Height']
 
 
-test['Height']
+test['Height'].str.extract(r"([0-9.]*)\W?(?:m)")
+
+# proposed regex ([0-9.]*)\W?(?:m)
