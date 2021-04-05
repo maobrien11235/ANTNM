@@ -34,8 +34,8 @@ the bias against shorter models or the like...
 
 So, the purpose of this project is evolving in 
 interesting ways:
-1. Perform Cox proportional hazard model to learn
-survival regression techniques.
+1. ~Perform Cox proportional hazard model to learn
+survival regression techniques.~
 2. Use the data cleaning process for the manually retrieved
 data as an opportunity to practice data pipeline unit
 testing.
@@ -54,6 +54,17 @@ exploring the pyyaml or confuse libraries for leveraging
 YAMLs to coordinate the project. I hate it but I may also
 go down the route of virtual environments too... gonna
 try to resist that...
+
+Update 04APR2021: talking to Daniel helped challenge an
+assumption that this problem may not be a survival analysis
+problem at all. Two things I'm realizing:
+1. Contestants are not directly comparable across seasons.
+Contestant X in season 4 that was in the top 2 may have only
+may have been eliminated in the first three episodes of season 21.
+So, at minimum, I would a game-theoretic approach to the problem.
+2. Lesser to (1), my planned target variable is not a time to event
+variable, which is just wholly against the design of the Cox proportional
+hazards models.
 
 # Notes and Starting Thoughts
 Note: sex is limited to only female contestants

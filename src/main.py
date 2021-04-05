@@ -21,8 +21,7 @@ test.info()
 import re
 
 test['Height']
+test['Heightmetric'] = test['Height'].str.extract(r"([0-9.]*)\W?(?:m)")
 
-
-test['Height'].str.extract(r"([0-9.]*)\W?(?:m)")
-
+test.info()
 # proposed regex ([0-9.]*)\W?(?:m)
