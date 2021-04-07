@@ -61,10 +61,18 @@ problem at all. Two things I'm realizing:
 1. Contestants are not directly comparable across seasons.
 Contestant X in season 4 that was in the top 2 may have only
 may have been eliminated in the first three episodes of season 21.
-So, at minimum, I would a game-theoretic approach to the problem.
+So, at minimum, I would need a more complex approach to the problem. 
+As it stands I have a dataset of 22 different trials (seasons), while I was 
+designing a problem statement that hoped I could use the 22 trials as a
+single dataset. 
 2. Lesser to (1), my planned target variable is not a time to event
 variable, which is just wholly against the design of the Cox proportional
 hazards models.
+
+Exploring more of my hope for survival analysis, perhaps going to 
+a tried-and-true project using a loan default dataset as my source
+for my survival analysis itch.
+
 
 
 
