@@ -66,6 +66,8 @@ So, at minimum, I would a game-theoretic approach to the problem.
 variable, which is just wholly against the design of the Cox proportional
 hazards models.
 
+
+
 # Notes and Starting Thoughts
 Note: sex is limited to only female contestants
 in the dataset. Season 22 had male contestants 
