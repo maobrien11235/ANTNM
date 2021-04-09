@@ -2,13 +2,20 @@
 # data engineering pipeline functions.
 
 import pytest
+import pandas as pd
+from ANTNM_Survival_Analysis.src.dat_eng import (
+    import_data,
+    extract_height
+    )
 
-
-
-def test_extract_height(df, col):
+# should functions operate within pandas 
+def test_extract_height():
+    # Create dataframe of tests.
+    test = pd.DataFrame({'test_col': ['5 ft 9 in (1.75 m)', "1.78 m (5 ft 10 in)"]})
+    
     # Take str of height and return str of height in meters
-    assert height_convert(df.col)[0] == "1.78 m"
-    assert height_convert(df.col) == "1.78 m"
+    assert extrac_height(test, "test_col") == "1.75"
+    assert extract_height(test, "test_col") == "1.78"
 
 def test_convert_height():
     # take str of height in meters and return heigh in 
