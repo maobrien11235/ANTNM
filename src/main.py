@@ -10,7 +10,8 @@ analysis.
 """
 # todo: research why my relative imports were failing.
 from ANTNM_Survival_Analysis.src.dat_eng import (
-    import_data
+    import_data,
+    extract_height
     )
 import confuse
 
@@ -20,8 +21,7 @@ test.info()
 
 import re
 
-test['Height']
-test['Heightmetric'] = test['Height'].str.extract(r"([0-9.]*)\W?(?:m)")
 
-test.info()
 # proposed regex ([0-9.]*)\W?(?:m)
+
+test_extract_height()

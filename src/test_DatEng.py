@@ -3,7 +3,7 @@
 
 import pytest
 import pandas as pd
-from ANTNM_Survival_Analysis.src.dat_eng import (
+from src.dat_eng import (
     import_data,
     extract_height
     )
