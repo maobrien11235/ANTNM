@@ -30,7 +30,7 @@ def import_data(path: str, file: str) -> DataFrame:
     """
     return pd.read_csv(path + file)
 
-def extract_height(df: DataFrame, col: str) -> DataFrame:
+def extract_height(df:DataFrame, col:str) -> DataFrame:
     """
     Function extracts the meter height of contestants.
 
@@ -48,4 +48,5 @@ def extract_height(df: DataFrame, col: str) -> DataFrame:
         just the metric value of height.
 
     """
-    df.col.str.extract(r"([0-9.]*)\W?(?:m)")
+
+    return df.col.str.extract(r"([0-9.]*)\W?(?:m)")

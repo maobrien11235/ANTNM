@@ -13,6 +13,7 @@ from ANTNM_Survival_Analysis.src.dat_eng import (
     import_data,
     extract_height
     )
+import re
 import confuse
 
 test = import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/",
