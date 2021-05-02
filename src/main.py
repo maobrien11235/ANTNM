@@ -9,20 +9,22 @@ Created on Sat Mar 27 21:36:20 2021
 analysis.
 """
 # todo: research why my relative imports were failing.
-from ANTNM_Survival_Analysis.src.dat_eng import (
+from src.dat_eng import (
     import_data,
     extract_height
     )
-import re
-import confuse
 
-test = import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/",
+model_data = import_data("/Users/matthewobrien/Documents/Learning/ANTNM_Survival_analysis/",
             "Manual_data.csv")
-test.info()
+model_data.info()
 
 import re
 
 
 # proposed regex ([0-9.]*)\W?(?:m)
 
-test_extract_height()
+model_data['new_height'] = extract_height(model_data, "Height")
+
+
+
+model_data['Height'].str.extract(r"([0-9.]*)\W?(?:m)")

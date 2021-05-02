@@ -48,5 +48,4 @@ def extract_height(df:DataFrame, col:str) -> DataFrame:
         just the metric value of height.
 
     """
-
-    return df.col.str.extract(r"([0-9.]*)\W?(?:m)")
+    return df[col].str.extract(r"([0-9.]*)\W?(?:m)")
